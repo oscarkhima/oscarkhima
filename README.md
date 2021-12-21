@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @oscarkhima
 - 👀 I’m interested in building frond-end web aplications 
-- 🌱 I’m currently learning Angular and Tree.js 
+- 🌱 I’m currently learning Angular and Three.js 
 - 📫 How to reach me ... boukhimaoscar@gmail.com
 
 <!---
