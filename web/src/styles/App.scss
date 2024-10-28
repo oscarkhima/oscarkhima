@@ -3,28 +3,17 @@
   margin: 0;
 }
 
-.bacgroudGrid {
-  z-index: -1;
-  position: absolute;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
-  overflow: hidden;
-
-  .line {
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-    border: 2px solid rgb(240, 240, 240);
-  }
-}
-
-.maintenance {
-  z-index: 100;
+@mixin centrar {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.maintenance {
+  @include centrar;
+  cursor: url('');
+  z-index: 100;
   padding-inline: 8rem;
   background-color: rgba(255, 255, 255, 0);
   color: black;
@@ -38,42 +27,79 @@
     height: 90%;
 
     .title {
-      font-size: 1.4rem;
+      font-size: 4rem;
       font-weight: 900;
+      @media (max-width: 300px) {
+        font-size: 1rem;
+        padding-inline: 4rem;
+      }
+      @media (max-width: 600px) {
+        font-size: 1.4rem;
+      }
+      @media (max-width: 1000px) {
+        font-size: 2rem;
+      }
     }
 
     .subtitle {
-      font-size: 1.4rem;
-      color: #3b62ea;
+      font-size: 2rem;
+      color: #ea903b;
       font-weight: 900;
-    }
-    @media screen and (max-width: 520px) {
-      
-      .title {
-        font-size: 2rem;
+      @media (max-width: 300px) {
+        font-size: 1rem;
+        padding-inline: 4rem;
       }
-      .subtitle {
+      @media (max-width: 600px) {
         font-size: 1.4rem;
-        color: #3b62ea;
-        font-weight: 900;
+      }
+      @media (max-width: 1000px) {
+        font-size: 2rem;
       }
     }
     
-    @media screen and (max-width: 900px) {
-      .title {
-        font-size: 2.4rem;
-        
-      }
-      .subtitle {
-        font-size: 3.8rem;
-        color: #3b62ea;
-        font-weight: 900;
-      }
-    }
   }
 
   .caption {
     height: 15%;
+    font-weight: 400;
+
+    .capitionTitle{
+      @media screen and (max-width: 300px) {
+        font-size: 2rem;
+      } 
+      @media screen and (max-width: 600px) {
+        font-size: large;
+      }
+      @media screen and (max-width: 1000px) {
+        font-size: 5px;
+      }
+    }
+  
+  }
+}
+
+
+@media screen and (max-width: 520px) {
+      
+  .title {
+    font-size: 5rem;
+  }
+  .subtitle {
+    font-size: 1.4rem;
+    color: #eab33b;
+    font-weight: 900;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .title {
+    font-size: 4rem;
+    
+  }
+  .subtitle {
+    font-size: 3.8rem;
+    color: #eab33b;
+    font-weight: 900;
   }
 }
 
